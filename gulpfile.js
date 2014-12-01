@@ -37,7 +37,7 @@ gulp.task('browser-sync', function () {
     });
 });
 
-// reload browser when php file changes
+// reload browser when js / html file changes
 gulp.task('bs-reload', function () {
     browserSync.reload();
 });
@@ -61,12 +61,13 @@ gulp.task('js', function() {
     return gulp.src([dir.js + '/*.js','!' + dir.min + '/*.js'])
 		.pipe(plumber(plumberErrorHandler))
         .pipe(uglify())
-        .pipe(gulp.dest(dir.min));
+        .pipe(gulp.dest(dir.min))
+        .pipe(browserSync.reload({stream: true}));
 });
 
 /// watch
 gulp.task('watch', function() {
-	gulp.watch([dir.js + '/*.js','!' + dir.min + '/*.js'],['js']);
+	gulp.watch(dir.js + '/*.js',['js','bs-reload']);
 	gulp.watch(dir.sass + '/*.scss',['compass']);
 	gulp.watch(dir.current + '/*.html',['bs-reload']);
 });
