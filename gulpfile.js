@@ -69,5 +69,6 @@ gulp.task('js', function() {
 gulp.task('watch', function() {
 	gulp.watch(dir.js + '/*.js',['js','bs-reload']);
 	gulp.watch(dir.sass + '/*.scss',['compass']);
+	gulp.watch(dir.partials + '/*.scss', ['compass']);
 	gulp.watch(dir.current + '/*.html',['bs-reload']);
 });
