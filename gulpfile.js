@@ -69,7 +69,11 @@ gulp.task('js', function() {
 /// watch
 gulp.task('watch', function() {
 	gulp.watch(dir.js + '/*.js',['js','bs-reload']);
+<<<<<<< HEAD
 	gulp.watch(dir.sass + '/*.scss', ['compass']);
+=======
+	gulp.watch(dir.sass + '/*.scss',['compass']);
+>>>>>>> FETCH_HEAD
 	gulp.watch(dir.partials + '/*.scss', ['compass']);
 	gulp.watch(dir.current + '/*.html',['bs-reload']);
 });
