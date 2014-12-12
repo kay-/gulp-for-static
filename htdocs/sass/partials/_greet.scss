@@ -1,0 +1,73 @@
+#greet {
+    background: url(#{$img-path}greet.jpg) no-repeat center fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: block;
+    svg#greet-logo {
+        max-width: 960px;
+        margin: 70px 50px 0 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+    }
+    @media (max-width: 768px) {
+        background: url(#{$img-path}greet.jpg) no-repeat center;
+    }
+
+    h1, p,  {
+        font-size: 3.5rem;
+        text-align: center;
+        color: $white-color;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        letter-spacing: 0.05em;
+        @media (max-width: 768px) {
+            font-size: 3.0rem;
+        }
+        @media (max-width: 480px) {
+            font-size: 2.0rem;
+        }
+
+    }
+    h1 {
+        font-style: italic;
+    }
+    .greet-des {
+        font-size: 3rem;
+        margin-bottom: 65px;
+        @media (max-width: 768px) {
+            font-size: 2.5rem;
+        }
+        @media (max-width: 480px) {
+            font-size: 1.5rem;
+        }
+    }
+
+
+    path{
+        stroke:$white-color;
+        fill:none;
+        stroke-width:.2;
+        stroke-dasharray: 140;
+        stroke-dashoffset:140;
+        -moz-animation:DASH 2s ease-in-out 1s forwards;
+        -webkit-animation:DASH 3s ease-in-out .1s forwards;
+        -o-animation:DASH 2s ease-in-out 1s forwards;
+        animation:DASH 2s ease-in-out 1s forwards;
+    /*    -webkit-transition:all .3s ease-in-out;
+        transition:all .3s ease-in-out;*/
+    }
+
+    @keyframes DASH{
+        0%  {stroke-dashoffset:140;fill:none;}
+        80% {stroke-dashoffset:20;fill:none;}
+        90% {stroke-dashoffset:0;fill:$white-color;stroke-width:.2;}
+        100%{stroke-dashoffset:0;fill:$white-color;stroke-width:0;}
+    }
+
+
+}

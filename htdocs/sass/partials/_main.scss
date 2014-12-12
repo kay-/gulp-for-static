@@ -1,0 +1,180 @@
+#works, #about, #contact {
+	padding-bottom: 40px;
+	h2 {
+		font-size: 2rem;
+		font-weight: bold;
+		padding: 50px 30px 5px 30px;
+		color: $black-color;
+		text-align: center;
+
+	}
+
+}
+
+#works {
+	background: $white-color2;
+	.flex-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-content: space-around;
+		list-style: none;
+		.work {
+			margin-top: 30px;
+			margin-bottom: 30px;
+			opacity: 0;
+			a {
+				display: block;
+				position: relative;
+				overflow: hidden;
+				background: $grey-color1;
+				border-radius: 5px;
+				img {
+					width: 300px;
+					border-radius: 5px;
+
+				}
+				.cover {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: rgba(0,0,0,0.6);
+					left: 0;
+					top: -100%;
+					transition: .5s ease-out;
+					h3, p {
+						color: $white-color;
+						font-size: 2rem;
+						text-align: center;
+						font-weight: normal;
+					}
+					h3 {
+						margin-top: 20%;
+
+					}
+					p {
+						margin: 20% 25%;
+						border: 2px solid $green-color2;
+						line-height: 1.5;
+
+					}
+				}
+				&:hover {
+						.cover {
+							top: 0;
+						}
+				}
+			}
+			.work-caption {
+				color: $black-color;
+				font-size: 1.2rem;
+				margin-top: 5px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+@for $i from 1 through 6 {
+    $DELAY: $i * 0.1s;
+
+    @keyframes animationFloat#{$i} {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .setAnimationFloat {
+        > li {
+            &:nth-child(#{$i}) {
+                animation: animationFloat#{$i} 1.6s ease $DELAY;
+                animation-fill-mode: both;
+            }
+        }
+    }
+}
+
+
+#about {
+	background: $grey-color1;
+	h3, p {
+		color: $black-color;
+	}
+	h3 {
+		font-size: 1.5rem;
+		padding: 15px 20px;
+		border-bottom: 1px solid $green-color1;
+		color: $green-color1;
+		@media (max-width: 480px) {
+            text-align: center;
+        }
+	}
+	p {
+		padding: 15px 20px;
+		line-height: 1.5;
+		font-size: 1.3rem;
+	}
+	ul {
+		padding: 15px 20px;
+		list-style-type: none;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: space-around;
+		li {
+			margin: 10px;
+			opacity: 0;
+			img {
+				width: 100px;
+			}
+		}
+	}
+
+@for $i from 1 through 8 {
+    $DELAY: $i * 0.1s;
+
+    @keyframes animationFloat#{$i} {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .setAnimationFloat2 {
+        > li {
+            &:nth-child(#{$i}) {
+                animation: animationFloat#{$i} 1.6s ease $DELAY;
+                animation-fill-mode: both;
+            }
+        }
+    }
+}
+
+
+}
+
+#contact {
+	background: url(#{$img-path}contact.jpg) no-repeat center fixed;
+	background-size: cover;
+    width: 100%;
+    position: relative;
+    @media (max-width: 768px) {
+        background: url(#{$img-path}contact.jpg) no-repeat center;
+    }
+    h2 {
+    	color: $white-color;
+    	padding-bottom: 20px;
+    }
+
+}
+

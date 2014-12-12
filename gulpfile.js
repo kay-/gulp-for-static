@@ -13,7 +13,8 @@ var dir = {
 	css: 'htdocs/css',
 	sass: 'htdocs/sass',
 	js: 'htdocs/js',
-	min: 'htdocs/min'
+	min: 'htdocs/min',
+	partials: 'htdocs/sass/partials'
 };
 
 //error notification settings for plumber
@@ -68,6 +69,7 @@ gulp.task('js', function() {
 /// watch
 gulp.task('watch', function() {
 	gulp.watch(dir.js + '/*.js',['js','bs-reload']);
-	gulp.watch(dir.sass + '/*.scss',['compass']);
+	gulp.watch(dir.sass + '/*.scss', ['compass']);
+	gulp.watch(dir.partials + '/*.scss', ['compass']);
 	gulp.watch(dir.current + '/*.html',['bs-reload']);
 });
