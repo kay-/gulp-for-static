@@ -122,6 +122,13 @@
 		line-height: 1.5;
 		font-size: 1.3rem;
 	}
+
+	p.medium {
+		text-align: center;
+		a {
+			font-style: italic;
+		}
+	}
 	ul {
 		padding: 15px 20px;
 		list-style-type: none;
