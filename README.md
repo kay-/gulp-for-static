@@ -1,3 +1,3 @@
-gulp-for-static
+Environment for portfolio site
 ===============
-for developing static website by using browser-sync
+
