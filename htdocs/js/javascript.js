@@ -4,7 +4,7 @@ window.onload = function () {
 
 var w = window.innerWidth;
 
-if (w > 480) {
+if (w >= 568) {
   window.onscroll = function() {
     visibl.set("getLine1", "setLine", 0.9, true);
     visibl.set("getLine2", "setLine", 0.9, true);
