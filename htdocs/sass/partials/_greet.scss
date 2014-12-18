@@ -8,36 +8,37 @@
     left: 0px;
     display: block;
     svg#greet-logo {
-        max-width: 960px;
+        max-width: 860px;
         margin: 70px 50px 0 50px;
         padding-top: 50px;
         padding-bottom: 50px;
-        @media (max-width: 480px) {
+        @media (max-width: 35.5rem) {
             display: none;
         }
 
     }
-    @media (max-width: 768px) {
-        background: url(#{$img-path}greet.jpg) no-repeat center;
+    @media (max-width: 48em) {
+        background: url(#{$img-path}greet.jpg) no-repeat top center;
+        background-size: 100% 100%;
     }
 
     h1.greet-name, p.greet-des,  {
-        font-size: 3.5rem;
+        font-size: 3.5em;
         text-align: center;
         color: $white-color;
         margin-top: 20px;
         margin-bottom: 20px;
         letter-spacing: 0.05em;
-        @media (max-width: 768px) {
-            font-size: 3.0rem;
+        @media (max-width: 48em) {
+            font-size: 3.0em;
         }
-        @media (max-width: 480px) {
-            font-size: 2.0rem;
+        @media (max-width: 35.5rem) {
+            font-size: 2.0em;
         }
     }
 
     h1.greet-name {
-        @media (max-width: 480px) {
+        @media (max-width: 35.5rem) {
             padding-top: 35%;
             margin-top: 0;
         }
@@ -47,13 +48,13 @@
         font-style: italic;
     }
     .greet-des {
-        font-size: 3rem;
+        font-size: 3em;
         margin-bottom: 65px;
-        @media (max-width: 768px) {
-            font-size: 2.5rem;
+        @media (max-width: 35.5rem) {
+            font-size: 2.5em;
         }
-        @media (max-width: 480px) {
-            font-size: 1.5rem;
+        @media (max-width: 35.5rem) {
+            font-size: 1.5em;
         }
     }
 

@@ -15,6 +15,7 @@ $img-path: '../images/';
   box-sizing: border-box;
 }
 
+
 body {
 	font-family: 'Roboto', sans-serif, Arial;
 	margin: 0;
@@ -24,6 +25,10 @@ body {
 	display: block;
 
 
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
 }
 
 
@@ -68,7 +73,7 @@ a {
 	color: $white-color;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.05rem;
 
     a {
         color: $white-color;
@@ -106,7 +111,7 @@ a {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 35.5rem) {
     .getLine {
     	margin: 3px auto;
     	display: block;

@@ -5,11 +5,7 @@ window.onload = function () {
 
 var w = window.innerWidth;
 
-<<<<<<< HEAD
 if (w > 568) {
-=======
-if (w > 480) {
->>>>>>> FETCH_HEAD
   window.onscroll = function() {
     visibl.set("getLine1", "setLine", 0.9, true);
     visibl.set("getLine2", "setLine", 0.9, true);
