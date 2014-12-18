@@ -127,4 +127,7 @@ a {
 
 #paddingLeft {
     padding-left: 100px;
+    @media (max-width: 35.5rem) {
+        padding-left: 0;
+    }
 }
