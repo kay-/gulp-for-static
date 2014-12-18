@@ -13,77 +13,69 @@
 
 #works {
 	background: $white-color2;
-	.pure-g {
-		padding: 0;
-		letter-spacing: .1rem;
-	}
-	.pure-g li {
-		margin-top: 30px;
-		margin-bottom: 30px;
-		opacity: 0;
-		margin-right: auto;
-		margin-left: auto;
-		width: 300px;
-		height: auto;
-
-		a {
-			display: block;
-			position: relative;
-			overflow: hidden;
-			background: $grey-color1;
-			border-radius: 5px;
-			width: 300px;
-			height: 300px;
-			img {
-				width: 300px;
+	.flex-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-content: space-around;
+		list-style: none;
+		.work {
+			margin-top: 30px;
+			margin-bottom: 30px;
+			opacity: 0;
+			@media (max-width: 480px) {
+				opacity: 1;
+    		}
+			a {
+				display: block;
+				position: relative;
+				overflow: hidden;
+				background: $grey-color1;
 				border-radius: 5px;
-
-			}
-			.cover {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				background: rgba(0,0,0,0.6);
-				left: 0;
-				top: -100%;
-				transition: .5s ease-out;
-				h3, p {
-					color: $white-color;
-					font-size: 2rem;
-					text-align: center;
-					font-weight: normal;
-				}
-				h3 {
-					margin-top: 20%;
+				img {
+					width: 300px;
+					border-radius: 5px;
 
 				}
-				p {
-					margin: 20% 25%;
-					border: 2px solid $green-color2;
-					line-height: 1.5;
-
-				}
-			}
-			&:hover {
 				.cover {
-					top: 0;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: rgba(0,0,0,0.6);
+					left: 0;
+					top: -100%;
+					transition: .5s ease-out;
+					h3, p {
+						color: $white-color;
+						font-size: 2rem;
+						text-align: center;
+						font-weight: normal;
+					}
+					h3 {
+						margin-top: 20%;
+
+					}
+					p {
+						margin: 20% 25%;
+						border: 2px solid $green-color2;
+						line-height: 1.5;
+
+					}
+				}
+				&:hover {
+						.cover {
+							top: 0;
+						}
 				}
 			}
-
-
+			.work-caption {
+				color: $black-color;
+				font-size: 1.2rem;
+				margin-top: 5px;
+				text-align: center;
+			}
 		}
-		.work-caption {
-			color: $black-color;
-			font-size: 1.2rem;
-			margin-top: 5px;
-			text-align: center;
 	}
-
-	}
-	.pure-g .pure-u-sd-1 {
-		opacity: 1;
-	}
-
 }
 
 @for $i from 1 through 6 {
@@ -121,7 +113,7 @@
 		padding: 15px 20px;
 		border-bottom: 1px solid $green-color1;
 		color: $green-color1;
-		.pure-u-sd-1 {
+		@media (max-width: 480px) {
             text-align: center;
         }
 	}
@@ -148,12 +140,12 @@
 		li {
 			margin: 10px;
 			opacity: 0;
-			@media (max-width: 35.5rem) {
+			@media (max-width: 480px) {
 				opacity: 1;
     		}
 			img {
 				width: 100px;
-				@media (max-width: 35.5rem) {
+				@media (max-width: 480px) {
 					width: 50px;
     			}
 			}
@@ -192,7 +184,7 @@
 	background-size: cover;
     width: 100%;
     position: relative;
-    .pure-u-md-1 {
+    @media (max-width: 768px) {
         background: url(#{$img-path}contact.jpg) no-repeat center;
     }
     h2 {
