@@ -1,10 +1,11 @@
 window.onload = function () {
   setGreetHeight();
+  changeMenu();
 };
 
 var w = window.innerWidth;
 
-if (w > 480) {
+if (w > 568) {
   window.onscroll = function() {
     visibl.set("getLine1", "setLine", 0.9, true);
     visibl.set("getLine2", "setLine", 0.9, true);
@@ -18,12 +19,24 @@ if (w > 480) {
 
 window.onresize = function() {
 
-setGreetHeight();
+  setGreetHeight();
   visibl.chk();
+  changeMenu();
 };
 
 function setGreetHeight() {
   var h = window.innerHeight;
   var greetEle = document.getElementById('greet');
   greetEle.style.height = h + "px";
+}
+
+function changeMenu() {
+  var elem = document.getElementById('menu-elements');
+  var w = window.innerWidth;
+
+  if (w <= 568) {
+    elem.classList.add('pure-menu-horizontal');
+  } else {
+      elem.classList.remove('pure-menu-horizontal');
+  }
 }
