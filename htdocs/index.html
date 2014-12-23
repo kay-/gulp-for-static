@@ -8,35 +8,28 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-<!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
-<!--<![endif]-->
-
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-	<header>
 
-		<nav class="pure-menu pure-menu-open">
+	<header>
+		<div class="inner">
+			<a href="http://www.keiyamagishi.com"><img src="images/icon.svg" alt="logo" class="logo"></a>
+
+		<nav>
 			<ul class="menu-list">
-				<li class="menu-item logo"><a href="http://www.keiyamagishi.com" pure-menu-heading><img src="images/icon.svg" alt="logo" class="logo"></a></li>
-				<li class="menu-item"><a href="#works">
+				<li class="menu-item"><a href="#works"><i class="fa fa-cogs"></i>
 					<span class="rwd-text">Works</span></a></li>
-				<li class="menu-item"><a href="#about">
+				<li class="menu-item"><a href="#about"><i class="fa fa-male"></i>
 					<span class="rwd-text">About</span></a></li>
-				<li class="menu-item"><a href="#contact">
+				<li class="menu-item"><a href="#contact"><i class="fa fa-comment-o"></i>
 					<span class="rwd-text">Contact</span></a></li>
 			</ul>
 		</nav>
+		</div>
 	</header>
-
-<div id="paddingLeft">
 
 	<section id="greet">
 		<div class="inner">
@@ -127,14 +120,12 @@
 		</div>
 	</section>
 
-
-
 	<main>
 		<section id="works" class="outer">
 			<div class="inner">
 			<h2>Works</h2>
-				<ul class="pure-g" id="getAnimationFloat">
-					<li class="pure-u-sd-1 pure-u-md-1-3 pure-u-lg-1-3">
+				<ul class="flex-wrapper" id="getAnimationFloat">
+					<li class="work">
 						<a href="https://github.com/kay-/visibl" target="_blank">
 							<img src="images/editor.svg" alt="">
 							<div class="cover">
@@ -145,7 +136,7 @@
 						</a>
 						<p class="work-caption">JavaScript Library</p>
 					</li>
-					<li class="pure-u-sd-1 pure-u-md-1-2 pure-u-lg-1-3">
+					<li class="work">
 						<a href="http://www.keiyamagishi.com/rwd" target="_blank">
 							<img src="images/coffee.jpg" alt="">
 							<div class="cover">
@@ -156,7 +147,7 @@
 						</a>
 						<p class="work-caption">WebDesign / RWD / jQuery</p>
 					</li>
-					<li class="pure-u-sd-1 pure-u-md-1-2 pure-u-lg-1-3">
+					<li class="work">
 						<a href="http://urbantraffic.info/" target="_blank">
 							<img src="images/urban.jpg" alt="">
 							<div class="cover">
@@ -167,7 +158,7 @@
 						</a>
 						<p class="work-caption">jQuery / WordPress</p>
 					</li>
-					<li class="pure-u-sd-1 pure-u-md-1-2 pure-u-lg-1-3">
+					<li class="work">
 						<a href="http://www.keiyamagishi.com/work.html#works1">
 							<img src="images/kafka.jpg" alt="">
 							<div class="cover">
@@ -178,7 +169,7 @@
 						</a>
 						<p class="work-caption">UI Design / User Test / JustInMind</p>
 					</li>
-					<li class="pure-u-sd-1 pure-u-md-1-2 pure-u-lg-1-3">
+					<li class="work">
 						<a href="https://www.youtube.com/watch?v=EKuFMwxTgpI&feature=youtu.be" target="_blank">
 							<img src="images/warp.jpg" alt="">
 							<div class="cover">
@@ -189,7 +180,7 @@
 						</a>
 						<p class="work-caption">PR Video / Premiere / Audition</p>
 					</li>
-					<li class="pure-u-sd-1 pure-u-md-1-2 pure-u-lg-1-3">
+					<li class="work">
 						<a href="http://www.keiyamagishi.com/work.html#works2">
 							<img src="images/dsec.jpg" alt="">
 							<div class="cover">
@@ -200,7 +191,7 @@
 						</a>
 						<p class="work-caption">Web Design / Illustrator</p>
 					</li>
-
+				</div>
 			</div>
 		</section>
 
@@ -247,12 +238,11 @@
 		</section>
 	</main>
 
-	<footer>
+	<footer class="outer">
 		<div class="inner"></div>
 		<h4>Copyright &copy; Kei Yamagishi</h4>
 	</footer>
 
-</div>
 	<script src="js/visibl.js"></script>
 	<script src="js/javascript.js"></script>
 
