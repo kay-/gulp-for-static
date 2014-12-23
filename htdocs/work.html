@@ -8,32 +8,31 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-<!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
-<!--<![endif]-->
-
 	<link rel="stylesheet" href="css/style.css">
-
+	<script src="js/visibl.js"></script>
+	<script src="js/javascript.js"></script>
 </head>
 <body>
 
+
 	<header>
-		<nav class="pure-menu pure-menu-open" id="menu-elements">
+		<div class="inner">
+			<a href="http://www.keiyamagishi.com"><img src="images/icon.svg" alt="logo" class="logo"></a>
+
+		<nav>
 			<ul class="menu-list">
-				<li class="logo"><a href="http://www.keiyamagishi.com" pure-menu-heading><img src="images/icon.svg" alt="logo" class="logo-img"></a></li>
-				<li class="menu-item"><a href="http://www.keiyamagishi.com">Home</a></li>
-				<li class="menu-item"><a href="#works1">Works1</a></li>
-				<li class="menu-item"><a href="#works2">
-					Works2</a></li>
+				<li class="menu-item"><a href="http://www.keiyamagishi.com"><i class="fa fa-home"></i>
+					<span class="rwd-text">Back To Home</span></a></li>
+				<li class="menu-item"><a href="#works1"><i class="fa fa-cog"></i>
+					<span class="rwd-text">Works1</span></a></li>
+				<li class="menu-item"><a href="#works2"><i class="fa fa-cogs"></i>
+					<span class="rwd-text">Works2</span></a></li>
 			</ul>
 		</nav>
+		</div>
 	</header>
 
-<div id="paddingLeft">
+
 
 	<main>
 		<section id="works1" class="outer">
@@ -69,8 +68,16 @@
 		<div class="inner"></div>
 		<h4>Copyright &copy; Kei Yamagishi</h4>
 	</footer>
-</div>
 
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+	  ga('create', 'UA-47051831-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 </body>
 </html>

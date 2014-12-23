@@ -1,28 +1,15 @@
-window.onload = function () {
-  setGreetHeight();
-  changeMenu();
-};
+window.addEventListener('load', setGreetHeight, false);
 
 var w = window.innerWidth;
 
-if (w > 568) {
-  window.onscroll = function() {
-    visibl.set("getLine1", "setLine", 0.9, true);
-    visibl.set("getLine2", "setLine", 0.9, true);
-    visibl.set("getLine3", "setLine", 0.9, false);
-    visibl.set("getLine4", "setLine", 0.9, false);
-    visibl.set("getAnimationFloat", "setAnimationFloat", 0.7, true);
-    visibl.set("getAnimationFloat2", "setAnimationFloat2", 0.8, true);
-  };
+if (w > 480) {
+  window.addEventListener('scroll', set, false);
 }
 
+window.addEventListener('resize', setGreetHeight, false);
+window.addEventListener('resize', display.chk, false);
 
-window.onresize = function() {
 
-  setGreetHeight();
-  visibl.chk();
-  changeMenu();
-};
 
 function setGreetHeight() {
   var h = window.innerHeight;
@@ -30,13 +17,11 @@ function setGreetHeight() {
   greetEle.style.height = h + "px";
 }
 
-function changeMenu() {
-  var elem = document.getElementById('menu-elements');
-  var w = window.innerWidth;
 
-  if (w <= 568) {
-    elem.classList.add('pure-menu-horizontal');
-  } else {
-      elem.classList.remove('pure-menu-horizontal');
-  }
+function set() {
+  display.setMulti("getLineId1", "getLineClass1", "setLine", 0.8, true);
+  display.setMulti("getLineId2", "getLineClass2", "setLine", 0.8, false);
+
+  display.setOne("getAnimationFloat", "setAnimationFloat", 0.7, true);
+  display.setOne("getAnimationFloat2", "setAnimationFloat2", 0.8, true);
 }
