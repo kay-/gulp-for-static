@@ -104,15 +104,12 @@ a {
 }
 
 @media (max-width: 480px) {
-    .getLine {
+    .getLineClass1, .getLineClass2  {
     	margin: 3px auto;
     	display: block;
     	height: 3px;
     	background: $green-color2;
     	width: 300px;
     	z-index: 100;
-    	:first-child {
-        	margin-bottom: 3px;
-    	}
     }
 }

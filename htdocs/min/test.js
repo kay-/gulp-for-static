@@ -1,1 +1,0 @@
-document.write("<h3>HELLo</h3>");
