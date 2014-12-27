@@ -32,6 +32,8 @@
 				overflow: hidden;
 				background: $grey-color1;
 				border-radius: 5px;
+				width: 300px;
+				height: 300px;
 				img {
 					width: 300px;
 					border-radius: 5px;
@@ -70,8 +72,8 @@
 			}
 			.work-caption {
 				color: $black-color;
-				font-size: 1.2rem;
-				margin-top: 5px;
+				font-size: 1.1rem;
+				margin-top: 8px;
 				text-align: center;
 			}
 		}
