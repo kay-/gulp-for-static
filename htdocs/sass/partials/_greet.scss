@@ -22,6 +22,10 @@
         background: url(#{$img-path}greet.jpg) no-repeat top center;
         background-size: 100% 100%;
     }
+    @media (max-width: 480px) {
+        background: url(#{$img-path}greet_s.jpg) no-repeat top center;
+        background-size: 100% 100%;
+    }
 
     h1.greet-name, p.greet-des,  {
         font-size: 3.5rem;
@@ -75,8 +79,8 @@
     }
 
     @keyframes DASH{
-        0%  {stroke-dashoffset:140;fill:none;}
-        80% {stroke-dashoffset:20;fill:none;}
+        0%  {stroke-dashoffset:140;fill:#191919;}
+        80% {stroke-dashoffset:20;fill:#cccccc;}
         90% {stroke-dashoffset:0;fill:$white-color;stroke-width:.2;}
         100%{stroke-dashoffset:0;fill:$white-color;stroke-width:0;}
     }
