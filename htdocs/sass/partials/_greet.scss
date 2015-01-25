@@ -66,23 +66,24 @@
 
     path{
         stroke:$white-color;
-        fill:none;
+        fill:$white-color;
         stroke-width:.2;
+        fill-opacity: 0;
         stroke-dasharray: 140;
         stroke-dashoffset:140;
-        -moz-animation:DASH 2s ease-in-out 1s forwards;
-        -webkit-animation:DASH 3s ease-in-out .1s forwards;
-        -o-animation:DASH 2s ease-in-out 1s forwards;
-        animation:DASH 2s ease-in-out 1s forwards;
-    /*    -webkit-transition:all .3s ease-in-out;
-        transition:all .3s ease-in-out;*/
+        -moz-animation:animateLogo 3s ease-in-out 1s forwards;
+        -webkit-animation:animateLogo 3s ease-in-out 1s forwards;
+        -o-animation:animateLogo 3s ease-in-out 1s forwards;
+        animation:animateLogo 3s ease-in-out 1s forwards;
+
     }
 
-    @keyframes DASH{
-        0%  {stroke-dashoffset:140;fill:#191919;}
-        80% {stroke-dashoffset:20;fill:#cccccc;}
-        90% {stroke-dashoffset:0;fill:$white-color;stroke-width:.2;}
-        100%{stroke-dashoffset:0;fill:$white-color;stroke-width:0;}
+    @keyframes animateLogo{
+        0%  {stroke-dashoffset:140;}
+        80% {stroke-dashoffset:20;}
+        90% {stroke-dashoffset:0;}
+        95% {stroke-dashoffset:0;stroke-width:.2;fill-opacity:0;}
+        100%{stroke-dashoffset:0;stroke-width:0;fill-opacity:1;}
     }
 
 

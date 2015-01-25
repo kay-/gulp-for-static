@@ -125,13 +125,17 @@
 		font-size: 1.3rem;
 	}
 
-	p.medium {
+	p.blog {
 		text-align: center;
 		a {
 			border-bottom: 1px solid;
 			padding-bottom: 1px;
 		}
 	}
+	p.blog+p.blog {
+		padding-top: 0;
+	}
+
 	ul {
 		padding: 15px 20px;
 		list-style-type: none;
