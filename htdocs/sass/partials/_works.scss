@@ -1,35 +1,30 @@
 #works1, #works2 {
 	padding-top: 40px;
 	padding-bottom: 40px;
-	h2 {
-		font-size: 2rem;
-		font-weight: bold;
-		padding: 50px 30px 5px 30px;
+	background: $grey-color1;
+	h1 {
+		font-size: 1.75rem;
+		font-weight: normal;
+		padding: 50px 30px 20px 30px;
 		color: $black-color;
 		text-align: center;
-		background: $white-color2;
+		border-bottom: 1px solid $black-color;
+		margin-right: 20px;
+		margin-left: 20px;
+		margin-bottom: 25px;
+
 
 	}
-	h3, p {
-		color: $black-color;
-	}
-	h3 {
-		font-size: 1.5rem;
-		padding: 15px 20px;
-		border-bottom: 1px solid $green-color1;
-		color: $green-color1;
-		@media (max-width: 480px) {
-            text-align: center;
-        }
-	}
+
 	p {
-		padding: 15px 20px;
+		padding: 10px 20px;
 		line-height: 1.5;
-		font-size: 1.3rem;
+		font-size: 1.25rem;
+		color: $black-color;
 	}
 
 	iframe {
-		margin: 10px auto;
+		margin: 30px auto;
 		display: block;
 		max-width: 750px;
 		width: 100%;
@@ -40,11 +35,33 @@
 
 	}
 	img {
-		margin: 10px auto;
+		margin: 30px auto;
 		display: block;
 		max-width: 650px;
 		width: 100%;
 		height: auto;
 
+	}
+
+}
+
+.work-links {
+	background: $white-color2;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	h2 {
+		font-size: 1.5rem;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	li {
+		font-size: 1.25rem;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+		a:hover {
+			color: $green-color1;
+		}
 	}
 }
