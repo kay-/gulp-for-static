@@ -80,7 +80,7 @@
 	}
 }
 
-@for $i from 1 through 6 {
+@for $i from 1 through 8 {
     $DELAY: $i * 0.1s;
 
     @keyframes animationFloat#{$i} {
@@ -130,6 +130,9 @@
 		a {
 			border-bottom: 1px solid;
 			padding-bottom: 1px;
+			&:hover {
+				color: $green-color1;
+			}
 		}
 	}
 	p.blog+p.blog {

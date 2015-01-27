@@ -1,4 +1,4 @@
-#works1, #works2 {
+.work-des {
 	padding-top: 40px;
 	padding-bottom: 40px;
 	background: $grey-color1;
@@ -12,6 +12,7 @@
 		margin-right: 20px;
 		margin-left: 20px;
 		margin-bottom: 25px;
+		line-height: 1.5;
 
 
 	}
@@ -21,6 +22,27 @@
 		line-height: 1.5;
 		font-size: 1.25rem;
 		color: $black-color;
+		i {
+			font-size: 1.2rem;
+		}
+	}
+	a {
+		color: $green-color1;
+	}
+	ul.tools {
+		padding: 30px 60px;
+		li.tool {
+			line-height: 1.5;
+			font-size: 1.1rem;
+			i {
+				margin-right: 15px;
+				font-size: 1.0rem;
+			}
+		}
+	}
+
+	li.tool+li.tool {
+		margin-top: 10px;
 	}
 
 	iframe {
@@ -57,11 +79,26 @@
 	}
 	li {
 		font-size: 1.25rem;
-		margin-top: 10px;
-		margin-bottom: 10px;
+		margin-top: 13px;
+		margin-bottom: 13px;
 		text-align: center;
 		a:hover {
 			color: $green-color1;
+		}
+	}
+	a.arrow {
+		color: $green-color1;
+		&::before {
+		margin-left: -18px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-left-color: $green-color1;
+        border-width: 10px;
+        margin-top: 1px;
 		}
 	}
 }
