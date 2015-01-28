@@ -75,6 +75,21 @@
 			</div>
 		</section>
 
+		<section id="contact" class="outer">
+			<div class="inner">
+				<h2>Contact</h2>
+
+				<div id="getLineId3" class="getLineClass2"></div>
+				<p class="icons">
+					<a href="https://github.com/kay8" target="_blank"><i class="fa fa-git"></i></a>
+					<a href="http://codepen.io/kay8/" target="_blank"><i class="fa fa-codepen"></i></a>
+					<a href="https://www.linkedin.com/in/keiyamagishi" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<a href="mailto:kay.yamagishi.work@gmail.com"><i class="fa fa-envelope-o"></i></a>
+				</p>
+				<div class="getLineClass2"></div>
+			</div>
+		</section>
+
 
 	</main>
 
@@ -85,7 +100,18 @@
 
 	</footer>
 
+	<script src="js/displayElem.js"></script>
+
 	<script>
+	var w = window.innerWidth;
+	if (w > 480) {
+	  window.addEventListener('scroll', set, false);
+	}
+
+	function set() {
+	  display.setMulti("getLineId3", "getLineClass2", "setLine", 0.8, false);
+
+	}
 
 	(function() {
 		var links = document.links;
