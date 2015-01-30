@@ -49,18 +49,21 @@
 					transition: .5s ease-out;
 					h3, p {
 						color: $white-color;
-						font-size: 2rem;
+
 						text-align: center;
 						font-weight: normal;
 					}
 					h3 {
 						margin-top: 20%;
+						font-size: 2rem;
 
 					}
 					p {
 						margin: 20% 25%;
 						border: 2px solid $green-color2;
 						line-height: 1.5;
+						font-size: 1.75rem;
+						padding: 3px 10px;
 
 					}
 				}
