@@ -117,7 +117,7 @@
 		font-size: 1.5rem;
 		padding: 15px 20px;
 		border-bottom: 1px solid $green-color1;
-		color: $green-color1;
+		color: $black-color;
 		@media (max-width: 480px) {
             text-align: center;
         }
@@ -129,11 +129,12 @@
 	}
 
 	p.blog {
-		text-align: center;
+		text-align: left;
 		a {
 			padding-bottom: 1px;
+			color: $green-color1;
 			&:hover {
-				color: $green-color1;
+				opacity: .6;
 			}
 		}
 	}
