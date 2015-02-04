@@ -83,15 +83,17 @@ a {
 
     }
 }
-.setLine {
+.getLineClass1, .getLineClass2 {
     margin: 3px auto;
     display: block;
     height: 3px;
+    width: 0;
     background: $green-color2;
+    z-index: 100;
+}
+.setLine {
     animation: expandLine .8s ease-out;
     animation-fill-mode: both;
-    z-index: 100;
-
 }
 
 @keyframes expandLine {
@@ -110,7 +112,6 @@ a {
     	height: 3px;
     	background: $green-color2;
     	width: 300px;
-    	z-index: 100;
     }
 }
 

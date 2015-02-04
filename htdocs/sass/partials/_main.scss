@@ -122,14 +122,18 @@
             text-align: center;
         }
 	}
-	p {
+	p, li.blog {
 		padding: 15px 20px;
 		line-height: 1.5;
 		font-size: 1.3rem;
 	}
 
-	p.blog {
+	ul.blog-list {
+		list-style: circle inside;
+	}
+	li.blog {
 		text-align: left;
+		display: list-item;
 		a {
 			padding-bottom: 1px;
 			color: $green-color1;
@@ -138,11 +142,11 @@
 			}
 		}
 	}
-	p.blog+p.blog {
+	li.blog+li.blog {
 		padding-top: 0;
 	}
 
-	ul {
+	ul#getAnimationFloat2 {
 		padding: 15px 20px;
 		list-style-type: none;
 		margin: 0 auto;
