@@ -83,7 +83,7 @@
 	}
 }
 
-@for $i from 1 through 8 {
+@for $i from 1 through 9 {
     $DELAY: $i * 0.1s;
 
     @keyframes animationFloat#{$i} {
