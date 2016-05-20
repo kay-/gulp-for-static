@@ -20,11 +20,14 @@
     }
     @media (max-width: 768px) {
         background: url(#{$img-path}greet.jpg) no-repeat top center;
-        background-size: 100% 100%;
+        //background-size: 100% 100%;
+        background-size: cover;
     }
     @media (max-width: 480px) {
         background: url(#{$img-path}greet_s.jpg) no-repeat top center;
-        background-size: 100% 100%;
+        //background-size: 100% 100%;
+        background: none;
+        background-color: #19191e;
     }
 
     h1.greet-name, p.greet-des,  {
@@ -50,10 +53,10 @@
     }
 
     p.greet-des {
-        font-style: italic;
+        font-weight: 100;
     }
     p.greet-des {
-        font-size: 2.7rem;
+        font-size: 2.5rem;
         margin-bottom: 65px;
         @media (max-width: 768px) {
             font-size: 2.5rem;
@@ -64,7 +67,7 @@
     }
 
 
-    path{
+    path {
         stroke:$white-color;
         fill:$white-color;
         stroke-width:.2;
@@ -77,14 +80,11 @@
         animation:animateLogo 3s ease-in-out 1s forwards;
 
     }
-
-    @keyframes animateLogo{
+}
+    @keyframes animateLogo {
         0%  {stroke-dashoffset:140;}
         80% {stroke-dashoffset:20;}
         90% {stroke-dashoffset:0;}
         95% {stroke-dashoffset:0;stroke-width:.2;fill-opacity:0;}
         100%{stroke-dashoffset:0;stroke-width:0;fill-opacity:1;}
     }
-
-
-}

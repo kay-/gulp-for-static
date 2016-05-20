@@ -1,11 +1,23 @@
 'use strict';
+
 var gulp = require('gulp'),
-	compass = require('gulp-compass'),
-	autoprefixer = require('gulp-autoprefixer'),
-	uglify = require('gulp-uglify'),
 	browserSync = require('browser-sync'),
-	notify = require('gulp-notify'),
-	plumber = require("gulp-plumber");
+	critical = require('critical'),
+	$ = require('gulp-load-plugins')({
+			pattern: ['gulp-*', 'gulp.*'],
+			replaceString: /\bgulp[\-.]/,
+			rename: {
+				'gulp-pleeease': 'please',
+				'gulp-minify-css': 'minifyCSS'
+			}
+
+	});
+
+
+/**
+ * Settings
+ */
+
 
 // directory
 var dir = {
@@ -17,15 +29,18 @@ var dir = {
 	partials: 'htdocs/sass/partials'
 };
 
-//error notification settings for plumber
-var plumberErrorHandler = { errorHandler: notify.onError({
+// error notification settings for plumber
+var plumberErrorHandler = { errorHandler: $.notify.onError({
 		title: 'Gulp',
 		message: "Error: <%= error.message %>"
 	})
 };
 
-// typing "gulp" on the command line let all tasks run
-gulp.task('default', ['browser-sync', 'watch', 'js', 'compass']);
+
+/**
+ * Tasks
+ */
+
 
 // set up localhost and synchronize browser
 gulp.task('browser-sync', function () {
@@ -43,34 +58,55 @@ gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-// execute compass
-gulp.task('compass', function() {
-	gulp.src(dir.sass + '/*.scss')
-	.pipe(plumber(plumberErrorHandler))
-	.pipe(compass({
-		config_file: 'config.rb',
-		css: dir.css,
-		sass: dir.sass
+// compile sass
+gulp.task('sass', function() {
+	return gulp.src(dir.sass + '/*.scss')
+	.pipe($.plumber(plumberErrorHandler))
+	.pipe($.sass())
+	.pipe($.please({
+		autoprefixer: {"browsers": ["last 4 versions"]},
+		minifier: false
 	}))
-	.pipe(autoprefixer('last 2 version'))
+	.pipe($.csscomb())
 	.pipe(gulp.dest(dir.css))
 	.pipe(browserSync.reload({stream: true}));
 });
 
-// minify js
-gulp.task('js', function() {
-    return gulp.src([dir.js + '/*.js','!' + dir.min + '/*.js'])
-		.pipe(plumber(plumberErrorHandler))
-        .pipe(uglify())
-        .pipe(gulp.dest(dir.min))
+// minify css
+gulp.task('minifyCSS', function() {
+    return gulp.src([dir.css + '/*.css'])
+		.pipe($.plumber(plumberErrorHandler))
+        .pipe($.minifyCSS())
+        .pipe($.rename({suffix: '.min'}))
+        .pipe(gulp.dest(dir.css))
         .pipe(browserSync.reload({stream: true}));
 });
 
-/// watch
+// minify js
+gulp.task('uglify', function() {
+    return gulp.src([dir.js + '/*.js'])
+		.pipe($.plumber(plumberErrorHandler))
+        .pipe($.uglify())
+        .pipe($.rename({suffix: '.min'}))
+        .pipe(gulp.dest(dir.js))
+        .pipe(browserSync.reload({stream: true}));
+});
+
+// Concatenates files
+gulp.task('concat', function() {
+});
+
+// watch
 gulp.task('watch', function() {
-	gulp.watch(dir.js + '/*.js',['js','bs-reload']);
-	gulp.watch(dir.sass + '/*.scss', ['compass']);
-	gulp.watch(dir.sass + '/*.scss',['compass']);
-	gulp.watch(dir.partials + '/*.scss', ['compass']);
+	gulp.watch(dir.js + '/*.js',['bs-reload']);
+	gulp.watch(dir.sass + '/*.scss',['sass']);
+	gulp.watch(dir.partials + '/*.scss', ['sass']);
 	gulp.watch(dir.current + '/*.html',['bs-reload']);
 });
+
+
+// default
+gulp.task('default', ['browser-sync', 'watch']);
+
+// release
+gulp.task('release', ['browser-sync', 'watch', 'minifyCSS', 'uglify']);

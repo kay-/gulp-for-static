@@ -22,6 +22,7 @@
 		line-height: 1.5;
 		font-size: 1.25rem;
 		color: $black-color;
+		font-weight: 300;
 		i {
 			font-size: 1.2rem;
 		}
@@ -79,11 +80,15 @@
 		margin-top: 13px;
 		margin-bottom: 13px;
 		text-align: center;
-		a:hover {
-			color: $green-color1;
+		a {
+			font-weight: 300;
+			&:hover {
+				color: $green-color1;
+			}
 		}
 	}
 	a.arrow {
+		font-weight: 400;
 		color: $green-color1;
 		&::before {
 		margin-left: -18px;
